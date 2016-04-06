@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DojoQuery Library</title>
+    <meta name="description" content="">
+    <meta name="author" content="Mollie Knute">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="DojoQuery2.js"></script>
+    
+    <style>
+    	body {
+    		font-family: Verdana, Arial, sans-serif;
+    		text-align: center;
+    	}
+    	#outputField {
+    		border: 3px solid #AAA;
+    		background-color: #DDD;
+    		width: 75%;
+    		height: 5em;
+    		margin: .5em auto;
+    		padding: 1em;
+    		font-size: larger;
+    		border-radius: 25px;
+    	}
+    </style>
+</head>
+<body>
+<h1>DojoQuery Library</h1>
+
+<button id="outputField">View the console to see what happens when you click or hover over me!</button>
+
+<script type="text/javascript">
+    
+    $Dojo('outputField').clicking(function() { console.log("The button was clicked!") });
+
+    $Dojo('outputField').hovering(function() { console.log("You are hovering over the button!") }, function() { console.log("You are away from the button!") });
+
+    console.log($Dojo('outputField'))
+
+
+</script>
+
+</body>
+</html>
